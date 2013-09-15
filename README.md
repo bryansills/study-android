@@ -1,2 +1,2 @@
-studywithfriends-andriod
+studywithfriends-android
 ========================
