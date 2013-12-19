@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-	compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:support-v4:+'
 
     testCompile 'junit:junit:4.10'
     testCompile 'org.robolectric:robolectric:2.1.+'
