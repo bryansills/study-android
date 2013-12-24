@@ -30,3 +30,6 @@ proguard/
 # Gradle
 .gradle/
 build/
+
+# API keys
+map_key.xml

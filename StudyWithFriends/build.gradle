@@ -33,6 +33,7 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:+'
+    compile 'com.google.android.gms:play-services:4.0.30'
 
     testCompile 'junit:junit:4.11'
     testCompile 'org.robolectric:robolectric:2.3-SNAPSHOT'
