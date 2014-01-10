@@ -45,6 +45,11 @@ public class MainActivityTest {
     }
 
     @Test
+    public void testTrue() throws Exception {
+        assertTrue(true);
+    }
+
+    @Test
     public void testActivity() throws Exception {
         assertTrue(mainActivity != null);
     }

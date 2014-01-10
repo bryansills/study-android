@@ -5,8 +5,13 @@
 
         <!-- For translucent ActionBar -->
         <item name="android:windowActionBarOverlay">true</item>
+        <!-- For darker ActionBar overflow buttons -->
+        <item name="android:actionOverflowButtonStyle">@style/ActionButtonOverflow</item>
     </style>
 
+    <style name="ActionButtonOverflow" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_overflow</item>
+    </style>
     <!-- ActionBar styles -->
     <style name="ActionBar" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:background">@color/action_bar_background</item>
