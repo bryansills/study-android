@@ -16,6 +16,8 @@ before_install:
   - mkdir -p $ANDROID_HOME/build-tools/
   - mv $ANDROID_HOME/android-4.4 $ANDROID_HOME/build-tools/19
 
+  - android list sdk
+
   # Install required components.
   # For a full list, run `android list sdk -a --extended`
   # Note that sysimg-18 downloads the ARM, x86 and MIPS images (we should optimize this).
@@ -26,7 +28,7 @@ before_install:
   - echo yes | android update sdk --filter sysimg-19 --no-ui --force > /dev/null
   - echo yes | android update sdk --filter extra-android-support --no-ui --force > /dev/null
   - echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
-  - echo yes | android update sdk --filter extra-google-google_play_services --no-ui --force > /dev/null
+  - echo yes | android update sdk --filter extra-google-google_play_services --no-ui --force
 
 script:
   - ./gradlew test
