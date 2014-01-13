@@ -1,5 +1,8 @@
 language: java
 jdk: oraclejdk7
+env:
+  global:
+    - secure: UXObAmTHk0/J5n5xohMKwOujxHrdLuraq7/5Jesxlluit2pGT8EiEJaoAZokTNJuqEylIbRWWT3nry9Y9z7ISRVEbcRgioalFuK4rfXyBayJ1Fnt6Y/2VWjDMmIvEf2F/sT9kad1y9SfTyFouAsr2PdqBCRgN+hA5X+Al9W0ic4=
 
 before_install:
   # Install base Android SDK
@@ -13,7 +16,6 @@ before_install:
   # Install required components.
   # For a full list, run `android list sdk -a --extended`
   # Note that sysimg-18 downloads the ARM, x86 and MIPS images (we should optimize this).
-  # Other relevant API's
   - echo yes | android update sdk --filter platform-tools --no-ui --force > /dev/null
   - echo yes | android update sdk --filter build-tools-19.0.1 --no-ui --force > /dev/null
   - echo yes | android update sdk --filter android-19 --no-ui --force > /dev/null
@@ -23,6 +25,9 @@ before_install:
 
   # We have to use the '--all' parameter because the SDK is weird an does not think we should be able to install this.
   - echo yes | android update sdk --filter extra-google-m2repository --all --no-ui --force > /dev/null
+
+  # Add Google Maps API key to project
+  - echo $MAPKEY >> StudyWithFriends/src/main/res/values/map_key.xml
 
 script:
   - ./gradlew test --info
