@@ -32,4 +32,4 @@ proguard/
 build/
 
 # API keys
-map_key.xml
+api_keys.xml
