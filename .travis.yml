@@ -27,7 +27,7 @@ before_install:
   - echo yes | android update sdk --filter extra-google-m2repository --all --no-ui --force > /dev/null
 
   # Add Google Maps API key to project
-  - sed -i 's/google-maps-key/'"$MAPKEY"'/g' StudyWithFriends/src/main/res/values/map_key.xml
+  - sed -i 's/google-maps-key/'"$MAPKEY"'/g' StudyWithFriends/src/main/res/values/api_keys.xml
 
 script:
   - ./gradlew test --info
